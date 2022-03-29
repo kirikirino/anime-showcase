@@ -3,7 +3,7 @@
 	<a target="_blank" href={{ .Get "url" }} title={{ .Get "name" }} class="anime url">
 	  <div class="anime block whole {{ .Get "model" | default "list"}} {{ .Get "primary-color" | default "default"}} {{ .Get "border-animation" | default "shadow"}}">
 		<div class="anime block left">
-		  <img class="anime poster {{ .Get "img-animation" | default "rotate"}}" src={{ .Get "poster" }} onerror="this.src='{{ $defaultImg }}'" />
+		  <img class="anime poster  {{ .Get "model" | default "list"}} {{ .Get "img-animation" | default "rotate"}}" src={{ .Get "poster" }} onerror="this.src='{{ $defaultImg }}'" />
 		</div>
 		<div class="anime block right">
 		  <div class="anime name {{ .Get "model" | default "list"}}">{{ .Get "name" }}</div>

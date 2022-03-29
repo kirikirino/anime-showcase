@@ -4,8 +4,22 @@
 }
 
 .anime.poster {
-    width: 131.5px !important;
-    height: 192.0px !important;
+
+    &.list{
+      width: 128.0px !important;
+      height: 192.0px !important;
+    }
+
+    &.comment{
+      width: 128.0px !important;
+      height: 192.0px !important;
+    }
+
+    &.jav{
+      width: 136.0px !important;
+      height: 192.0px !important;
+    }
+
     border-radius: 5px;
     border: 1px solid #ddd;
     padding: 2px;
@@ -31,6 +45,10 @@
 
     &.comment {
       width: 98%;
+    }
+
+    &.jav {
+      width: 46%;
     }
 
     &.shadow {
@@ -226,6 +244,10 @@
         flex-direction: row !important;
       }
 
+      &.jav {
+        flex-direction: column !important;
+      }
+
   }
 
 }
@@ -240,6 +262,10 @@
       }
 
       &.comment {
+        width: 98%;
+      }
+
+      &.jav {
         width: 98%;
       }
   }
