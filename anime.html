@@ -1,0 +1,19 @@
+{{ if .IsNamedParams }}
+{{ $defaultImg := "https://sdn.geekzu.org/avatar/d41d8cd98f00b204e9800998ecf8427e?d=retro" }}
+	<a target="_blank" href={{ .Get "url" }} title={{ .Get "name" }} class="anime url">
+	  <div class="anime block whole {{ .Get "model" | default "list"}} {{ .Get "primary-color" | default "default"}} {{ .Get "border-animation" | default "shadow"}}">
+		<div class="anime block left">
+		  <img class="anime poster {{ .Get "img-animation" | default "rotate"}}" src={{ .Get "poster" }} onerror="this.src='{{ $defaultImg }}'" />
+		</div>
+		<div class="anime block right">
+		  <div class="anime name {{ .Get "model" | default "list"}}">{{ .Get "name" }}</div>
+			<div class="anime score">{{ .Get "score" }}</div>
+			<div class="anime tag  {{ .Get "model" | default "list"}}">
+				<div class="anime year {{ .Get "quarter" | default "spring"}}">{{ .Get "year" }}</div>
+				<div class="anime rewrite">{{ .Get "rewrite" }}</div>
+			</div>
+			<div class="anime info">{{ .Get "word" }}</div>
+		</div>
+	  </div>
+	</a>
+{{ end }}
